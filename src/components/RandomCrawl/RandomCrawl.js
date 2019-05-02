@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Crawl from 'react-star-wars-crawl';
-import { getRandomFilm } from '../apiCalls';
+import { getRandomFilm } from '../../apiCalls';
 
 class RandomCrawl extends Component {
   constructor() {

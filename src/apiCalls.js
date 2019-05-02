@@ -10,3 +10,16 @@ export const getRandomFilm = (ranNum) => {
       }
     });
 }
+
+export const getCardData = (category) => {
+  const url = `https://swapi.co/api/${category}/`;
+
+  return fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw Error('Card data failed to load');
+      } else {
+        return response.json();
+      }
+    });
+}

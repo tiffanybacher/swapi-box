@@ -8,6 +8,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@import './App/App';
+@import './components/App/App';
 @import '../node_modules/react-star-wars-crawl/lib/index.css';
-@import './RandomCrawl/RandomCrawl';
+@import './components/RandomCrawl/RandomCrawl';
