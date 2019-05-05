@@ -35,27 +35,26 @@ class Card extends Component {
   }
 
   render() {
-    const { category, data } = this.props;
-    const name = data.name;
-
-    if (category === 'people') {
+    if (this.state.category === 'people') {
       this.getSpeciesData();
       this.getHomeworldData();
+      
+      const { species } = this.state || '';
+      const { name } = this.state.homeworld || '';
+      const { population } = this.state.homeworld || '';
 
       var subData = 
         <div className="subData">
           <h3>Species: {species}</h3>
-          {//<h3>Homeworld: {homeworld}</h3>}
-          }
-          {//<h3>Population: {population}</h3>
-          }
+          <h3>Homeworld: {name}</h3>
+          <h3>Population: {population}</h3>
           <button>Save</button>
         </div>
     }
 
-    return(
+    return (
       <article className='Card'>
-        <h2>{name}</h2>
+        <h2>{this.state.name}</h2>
         {subData}
       </article>
     );
