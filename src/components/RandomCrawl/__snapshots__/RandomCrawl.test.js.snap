@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RandomCrawl should match the snapshot 1`] = `
+<Crawl
+  title="Episode undefined"
+/>
+`;

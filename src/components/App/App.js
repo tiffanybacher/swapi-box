@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import RandomCrawl from '../RandomCrawl/RandomCrawl';
+import MainContainer from '../MainContainer/MainContainer';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      data: {}
-    }
-  }
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     data: {}
+  //   }
+  // }
 
   render() {
     return (
@@ -16,6 +17,7 @@ class App extends Component {
          <h1>STAR WARS</h1>
          <RandomCrawl />
         </header>
+        <MainContainer />
       </div>
     );
   }

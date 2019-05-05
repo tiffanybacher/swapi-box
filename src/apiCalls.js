@@ -23,3 +23,14 @@ export const getCardData = (category) => {
       }
     });
 }
+
+export const getSubData = (url) => {
+  return fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw Error('Data failed to load');
+      } else {
+        return response.json();
+      }
+    });
+}

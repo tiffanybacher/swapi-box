@@ -15,7 +15,9 @@ class RandomCrawl extends Component {
 
     return getRandomFilm(ranNum)
       .then(film => this.setState({ film }))
-      .catch(error => console.log(error));
+      .catch(error => this.setState({
+          errorStatus: 'Error adding film'
+        }));
   }
 
   render() {
