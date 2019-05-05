@@ -10,12 +10,15 @@ class MainContainer extends Component {
     CardHolderShown: false
   }
 
-  setCardData = (name) => {
-    return getCardData(name)
+  setCardData = (category) => {
+    return getCardData(category)
       .then(data => this.setState({ 
-        category: name,
+        category,
         data: data.results,
         CardHolderShown: true
+      }))
+      .catch(error => this.setState({
+        errorStatus: `Failed to load ${category} data`
       }));
   }
 

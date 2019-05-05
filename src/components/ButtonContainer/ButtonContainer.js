@@ -11,16 +11,19 @@ class ButtonContainer extends Component {
     return (
       <div className="ButtonContainer">
       <button 
+        className="peopleBtn"
         onClick={this.handleClick} 
         name='people'>
         People
       </button>
       <button 
+        className="planetsBtn"
         onClick={this.handleClick} 
         name='planets'>
         Planets
       </button>
       <button 
+        className="vehiclesBtn"
         onClick={this.handleClick} 
         name='vehicles'>
         Vehicles

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match snapshot 1`] = `
+<article
+  className="Card"
+>
+  <h2 />
+  <div
+    className="subData"
+  >
+    <h3>
+      Species: 
+    </h3>
+    <h3>
+      Homeworld: 
+    </h3>
+    <h3>
+      Population: 
+    </h3>
+    <button>
+      Save
+    </button>
+  </div>
+</article>
+`;

@@ -6,7 +6,7 @@ class CardHolder extends Component {
     const { category, data } = this.props;
 
     const cards = data.map(person => {
-        return <Card category={category} data={person} />
+        return <Card category={category} data={person} key={person.created} />
       });
 
     return (

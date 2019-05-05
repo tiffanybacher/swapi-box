@@ -11,7 +11,7 @@ exports[`App should render correctly 1`] = `
       STAR WARS
     </h1>
     <RandomCrawl />
-    <ButtonContainer />
   </header>
+  <MainContainer />
 </div>
 `;

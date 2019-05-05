@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonContainer should match snapshot 1`] = `
+<div
+  className="ButtonContainer"
+>
+  <button
+    className="peopleBtn"
+    name="people"
+    onClick={[Function]}
+  >
+    People
+  </button>
+  <button
+    className="planetsBtn"
+    name="planets"
+    onClick={[Function]}
+  >
+    Planets
+  </button>
+  <button
+    className="vehiclesBtn"
+    name="vehicles"
+    onClick={[Function]}
+  >
+    Vehicles
+  </button>
+</div>
+`;
