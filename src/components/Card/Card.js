@@ -34,7 +34,32 @@ class Card extends Component {
       }));
   }
 
+  getResidentsData() {
+    const { data } = this.props;
+
+    data.residents.forEach(residentURL => {
+      return getSubData(residentURL)
+        .then(resident => {
+          let residents;
+
+          if (!this.state.residents) {
+            residents = [resident.name];
+          } else {
+            residents = [...this.state.residents, resident.name];
+          }
+
+          this.setState({ residents });
+        })
+        .catch(error => this.setState({
+          errorStatus: 'Failed to load resident data'
+        }));
+    });
+
+  }
+
   render() {
+    let subData;
+
     if (this.state.category === 'people') {
       this.getSpeciesData();
       this.getHomeworldData();
@@ -43,12 +68,27 @@ class Card extends Component {
       const { name } = this.state.homeworld || '';
       const { population } = this.state.homeworld || '';
 
-      var subData = 
+      subData = 
         <div className="subData">
           <h3>Species: {species}</h3>
           <h3>Homeworld: {name}</h3>
           <h3>Population: {population}</h3>
           <button>Save</button>
+        </div>
+    } else if (this.state.category === 'planets') {
+      // this.getResidentsData();
+    
+      // const { residents } = this.state || [];
+      // const residentList = residents.map(resident => {
+        // return <p>{resident}</p>
+      const { population, terrain, climate } = this.props.data;
+
+      subData = 
+        <div className="subData">
+          <h3>Population: {population}</h3>
+          <h3>Terrain: {terrain}</h3>
+          <h3>Climate: {climate}</h3>
+          {/*<h3>Residents: {}</h3>*/}
         </div>
     }
 
