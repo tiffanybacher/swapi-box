@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ButtonContainer from './ButtonContainer';
+import MainContainer from './MainContainer';
 
-describe('ButtonContainer', () => {
+describe('MainContainer', () => {
   it('should match the snapshot', () => {
     
   });

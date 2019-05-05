@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getCardData } from '../../apiCalls';
+import ButtonContainer from '../ButtonContainer/ButtonContainer';
 import CardHolder from '../CardHolder/CardHolder';
 
 class MainContainer extends Component {
@@ -9,9 +10,7 @@ class MainContainer extends Component {
     CardHolderShown: false
   }
 
-  handleClick = (e) => {
-    const { name } = e.target;
-
+  setCardData = (name) => {
     return getCardData(name)
       .then(data => this.setState({ 
         category: name,
@@ -30,21 +29,8 @@ class MainContainer extends Component {
 
     return (
       <main className="MainContainer">
-        <button 
-          onClick={this.handleClick} 
-          name='people'>
-          People
-        </button>
-        <button 
-          onClick={this.handleClick} 
-          name='planets'>
-          Planets
-        </button>
-        <button 
-          onClick={this.handleClick} 
-          name='vehicles'>
-          Vehicles
-        </button>
+        <ButtonContainer 
+          setCardData={this.setCardData} />
         {cardHolder}
       </main>
     );
