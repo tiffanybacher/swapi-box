@@ -5,9 +5,9 @@ An app to view data on people, planets, and vehicles from the Star Wars universe
 The motivation behind this project was to learn how to access and display data from a large API (SWAPI).
  
 ## Screenshots
-![Screenshot of landing page](http://tinypic.com/r/34imrn8/9)
-![Screenshot showing page after clicking a category button](http://tinypic.com/r/2hdz5kz/9)
-![Screenshot showing category cards](http://tinypic.com/r/2lvb6g6/9)
+![Screenshot of landing page](https://tinypic.com/r/34imrn8/9 "Screenshot of landing page")
+![Screenshot showing page after clicking a category button](https://tinypic.com/r/2hdz5kz/9 "Screenshot showing page after clicking a category button")
+![Screenshot showing category cards](https://tinypic.com/r/2lvb6g6/9 "Screenshot showing category cards")
 
 ## Tech/framework used
 Built with React
