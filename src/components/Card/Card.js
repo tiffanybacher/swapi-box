@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { getSubData } from '../../apiCalls';
+import PropTypes from 'prop-types';
 
 class Card extends Component {
   state = {
     category: this.props.category,
-    name: this.props.data.name
+    name: this.props.data.name,
+    id: this.props.data.created,
+    isFave: false
   }
 
   componentDidMount() {
@@ -69,6 +72,16 @@ class Card extends Component {
       .catch(error => this.setState({errorStatus: 'Failed to load residents data'}))
   }
 
+  handleSave = () => {
+    if (!this.state.isFave) {
+      this.setState({ isFave: true }, () => 
+        this.props.addToFavorites(this.state));
+    } else {
+      this.props.removeFromFavorites(this.state.id);
+      this.setState({ isFave: false });
+    }
+  }
+
   render() {
     let subData;
 
@@ -108,14 +121,37 @@ class Card extends Component {
         </div>
     }
 
+    let btnText;
+    let btnClass;
+
+    if (this.state.isFave) {
+      btnText = 'Saved';
+      btnClass = 'saved';
+    } else {
+      btnText = 'Save';
+      btnClass = null;
+    }
+
     return (
-      <article className='Card'>
-        <button>Save</button>
+      <article 
+        className="Card">
+        <button 
+          className={btnClass}
+          onClick={this.handleSave}>
+          {btnText}
+        </button>
         <h2>{this.state.name}</h2>
         {subData}
       </article>
     );
   }
+}
+
+Card.propTypes = {
+  category: PropTypes.string,
+  data: PropTypes.object,
+  addToFavorites: PropTypes.func,
+  removeFromFavorites: PropTypes.func
 }
 
 export default Card;

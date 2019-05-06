@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class ButtonContainer extends Component {
   handleClick = (e) => {
     const { name } = e.target;
-
+    
+    this.props.hideFavorites();
+    
     this.props.setCardData(name);
+  }
+
+  handleFavoritesClick = () => {
+    this.props.showFavorites();
   }
 
   render() {
@@ -29,12 +36,19 @@ class ButtonContainer extends Component {
         Vehicles
       </button>
       <button
-        className="favoritesBtn">
+        className="favoritesBtn"
+        onClick={this.handleFavoritesClick}>
         Favorites
       </button>
       </div>
     );
   }
+}
+
+ButtonContainer.propTypes = {
+  setCardData: PropTypes.func,
+  showFavorites: PropTypes.func,
+  hideFavorites: PropTypes.func
 }
 
 export default ButtonContainer;

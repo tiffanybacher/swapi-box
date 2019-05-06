@@ -4,6 +4,22 @@ import MainContainer from '../MainContainer/MainContainer';
 import StarWarsLogo from '../../images/Star_Wars_logo.png';
 
 class App extends Component {
+  state = {
+    favorites: []
+  }
+
+  addToFavorites = (card) => {
+    const favorites = [...this.state.favorites, card];
+
+    this.setState({ favorites });
+  }
+
+  removeFromFavorites = (id) => {
+    const favorites = this.state.favorites.filter(fave => fave.id !== id);
+
+    this.setState({ favorites });
+  }
+
   render() {
     return (
       <div className="App">
@@ -11,7 +27,10 @@ class App extends Component {
         <img src={StarWarsLogo} alt="Star Wars Logo"/>
         </header>
         <RandomCrawl />
-        <MainContainer />
+        <MainContainer 
+          addToFavorites={this.addToFavorites}
+          removeFromFavorites={this.removeFromFavorites} 
+          favorites={this.state.favorites} />
       </div>
     );
   }

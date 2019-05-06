@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 import Card from '../Card/Card';
+import PropTypes from 'prop-types';
 
 class CardHolder extends Component {
   render() {
-    const { category, data } = this.props;
+    let { category, data } = this.props;
 
-    const cards = data.map(person => {
-        return <Card category={category} data={person} key={person.created} />
+    if (this.props.favoritesShown) {
+      data = this.props.favorites;
+    }
+
+    const cards = data.map(item => {
+        return <Card 
+          category={category} 
+          data={item} 
+          addToFavorites={this.props.addToFavorites}
+          removeFromFavorites={this.props.removeFromFavorites}
+          key={item.created} />
       });
 
     return (
@@ -15,6 +25,15 @@ class CardHolder extends Component {
       </section>
     );
   }
+}
+
+CardHolder.propTypes = {
+  category: PropTypes.string,
+  data: PropTypes.array,
+  addToFavorites: PropTypes.func,
+  removeFromFavorites: PropTypes.func,
+  favoritesShown: PropTypes.bool,
+  favorites: PropTypes.array
 }
 
 export default CardHolder;
