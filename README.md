@@ -5,11 +5,12 @@ An app to view data on people, planets, and vehicles from the Star Wars universe
 The motivation behind this project was to learn how to access and display data from a large API (SWAPI).
  
 ## Screenshots
-Include logo/demo screenshot etc.
+![Screenshot of landing page](http://tinypic.com/r/34imrn8/9)
+![Screenshot showing page after clicking a category button](http://tinypic.com/r/2hdz5kz/9)
+![Screenshot showing category cards](http://tinypic.com/r/2lvb6g6/9)
 
 ## Tech/framework used
-<b>Built with</b>
-- React
+Built with React
 
 ## Installation
 ```git clone https://github.com/tiffanybacher/swapi-box.git```
