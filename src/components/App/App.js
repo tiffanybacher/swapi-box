@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-         <h1>STAR WARS</h1>
+         <h1>SWAPI BOX</h1>
          <RandomCrawl />
         </header>
         <MainContainer />

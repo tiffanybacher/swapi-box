@@ -4,7 +4,9 @@ exports[`Card should match snapshot 1`] = `
 <article
   className="Card"
 >
-  <h2 />
+  <h2>
+    Luke Skywalker
+  </h2>
   <div
     className="subData"
   >

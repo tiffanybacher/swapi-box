@@ -26,11 +26,13 @@ class RandomCrawl extends Component {
     const numeralIndex = film.episode_id - 1;
    
     return (
-      <Crawl
-        title={`Episode ${romanNumerals[numeralIndex]}`}
-        subTitle={film.title}
-        text={film.opening_crawl}
-      />
+      <div className="RandomCrawl">
+        <Crawl
+          title={`Episode ${romanNumerals[numeralIndex]}`}
+          subTitle={film.title}
+          text={film.opening_crawl}
+        />
+      </div>
     );
   }
 }
