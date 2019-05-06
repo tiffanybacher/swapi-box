@@ -28,6 +28,10 @@ class ButtonContainer extends Component {
         name='vehicles'>
         Vehicles
       </button>
+      <button
+        className="favoritesBtn">
+        Favorites
+      </button>
       </div>
     );
   }

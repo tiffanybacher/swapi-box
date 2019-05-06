@@ -80,7 +80,6 @@ class Card extends Component {
           <h3>Species: {species}</h3>
           <h3>Homeworld: {homeworld}</h3>
           <h3>Population: {population}</h3>
-          <button>Save</button>
         </div>
     } else if (this.state.category === 'planets') {
       const { residents, population, terrain, climate } = this.state;
@@ -111,6 +110,7 @@ class Card extends Component {
 
     return (
       <article className='Card'>
+        <button>Save</button>
         <h2>{this.state.name}</h2>
         {subData}
       </article>

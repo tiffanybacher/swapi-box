@@ -1,5 +1,11 @@
 .App {
-  h1 {
-    margin: 20px 40px;
+  .App-header {
+    background: black;
+    text-align: center;
+
+    img {
+      margin-top: 30px;
+      width: 30%;
+    }
   }
 }
