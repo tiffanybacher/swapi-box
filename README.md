@@ -13,9 +13,9 @@ The motivation behind this project was to learn how to access and display data f
 Built with React
 
 ## Installation
-```git clone https://github.com/tiffanybacher/swapi-box.git```
-```npm install```
-```npm start```
+-```git clone https://github.com/tiffanybacher/swapi-box.git```
+-```npm install```
+-```npm start```
 
 ## API Reference
 [https://swapi.co/api/](https://swapi.co/api/)
